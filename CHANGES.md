@@ -1,5 +1,9 @@
 # Changes
 
+## v0.2.0
+
+Test Release
+
 ## v0.1.0
 
 linkerd-smi 0.1.0 is the first public release of the SMI extension
