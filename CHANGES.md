@@ -1,5 +1,9 @@
 # Changes
 
+## v0.4.0
+
+Another test, another release.
+
 ## v0.3.0
 
 Another test release
