@@ -77,7 +77,6 @@ jobs:
       run: |
         echo "TAG=$(CI_FORCE_CLEAN=1 bin/root-tag)" >> $GITHUB_ENV
         bin/extract-release-notes NOTES.md
-        echo "::set-output name=tag::$(echo $TAG)"
     - name: Download CLI archives
       uses: actions/download-artifact@3be87be14a055c47b01d3bd88f8fe02320a9bb60
       with:
@@ -86,6 +85,7 @@ jobs:
     - name: Generate SHA256SUMS
       run: |
         ./bin/generate-sha256sums $TAG
+        echo "::set-output name=tag::$(echo $TAG)"
     - name: Create release
       id: create_release
       uses: softprops/action-gh-release@91409e712cf565ce9eff10c87a8d1b11b81757ae
